@@ -144,3 +144,9 @@ Just like ground, components need to share a power connection. The red rail on t
 > Having issues? See the [Troubleshooting guide](Troubleshooting.md).
 
 Head to the next section: [It Has a Pulse](../2_it_has_a_pulse/Instructions.md)
+## 8. Linux USB permissions
+>This is temporary allow usb to run in linux as long as device is plugged in, also when restarting IDE you may need to run command again
+1. sudo chmod a+rw /dev/ttyACM0
+>Permanent allow to write usb for current user
+1. sudo usermod -a -G dialout $USER
+2. you will need to logout or reboot for it to take effect

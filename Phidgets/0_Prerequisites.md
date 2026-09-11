@@ -55,11 +55,16 @@ Once running, the server stays active in the background — you don't need to re
 Linux doesn't have a graphical Control Panel by default — the Network Server runs as a service instead.
 
 1. Follow the [Phidgets Downloads for Linux](https://www.phidgets.com/docs/OS_-_Linux) page to install `phidget22networkserver`.
-2. Start (and enable, so it survives reboots) the service:
+2. Install the service:
+   ```
+   sudo apt-get install phidget22networkserver
+   ```
+
+3. Start (and enable, so it survives reboots) the service:
    ```
    sudo systemctl enable --now phidget22networkserver
    ```
-3. Confirm it's running with:
+4. Confirm it's running with:
    ```
    sudo systemctl status phidget22networkserver
    ```
