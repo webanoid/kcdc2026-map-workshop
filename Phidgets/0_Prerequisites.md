@@ -68,7 +68,7 @@ Linux doesn't have a graphical Control Panel by default — the Network Server r
    ```
    sudo systemctl status phidget22networkserver
    ```
-   It defaults to listening on port `8989`, same as Windows and macOS.
+   a. It defaults to listening on port `8080`, if not check sudo ss -tulpn | grep phidget.
 
 Once running on any OS, the server stays active in the background — you don't need to relaunch it every time, only confirm it's still running before starting an example.
 
